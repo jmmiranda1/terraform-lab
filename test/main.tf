@@ -2,9 +2,9 @@
 provider "azurerm" {
   features {}
   backend "azurerm" {
-    resource_group_name   = "<RESOURCE_GROUP_NAME>"
-    storage_account_name  = "<STORAGE_ACCOUNT_NAME>"
-    container_name        = "<CONTAINER_NAME>"
+    resource_group_name   = "terraform-backend"
+    storage_account_name  = "tflabstorage"
+    container_name        = "tfbackend"
     key                   = "terraform.tfstate"
   }
 }
@@ -13,4 +13,8 @@ provider "azurerm" {
 resource "azurerm_resource_group" "rg" {
   name     = "test"
   location = "West US"
+
+  tags = {
+    Environment = "test"
+  }
 }
