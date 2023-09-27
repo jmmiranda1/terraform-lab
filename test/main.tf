@@ -2,10 +2,10 @@
 provider "azurerm" {
   features {}
   backend "azurerm" {
-    resource_group_name   = "terraform-backend"
-    storage_account_name  = "tflabstorage"
-    container_name        = "tfbackend"
-    key                   = "terraform.tfstate"
+    resource_group_name  = "terraform-backend"
+    storage_account_name = "tflabstorage"
+    container_name       = "tfbackend"
+    key                  = "terraform.tfstate"
   }
 }
 
@@ -16,5 +16,6 @@ resource "azurerm_resource_group" "rg" {
 
   tags = {
     Environment = "test"
+    Deployment  = "Github"
   }
 }
