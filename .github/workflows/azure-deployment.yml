@@ -1,11 +1,12 @@
 name: Azure Deployment
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-        'test'
+    push:
+      branches:
+        - main
+      paths:
+        - 'test'  
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
