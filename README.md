@@ -1,2 +1,2 @@
-# terraform-lab
+# Terraform Lab
 Terraform practice
