@@ -17,5 +17,6 @@ resource "azurerm_resource_group" "rg" {
   tags = {
     Environment = "test"
     DeployedBy  = "Github Workflows"
+    Contact     = "j.m.miranda@outlook.com"
   }
 }
